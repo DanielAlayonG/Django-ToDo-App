@@ -1,0 +1,41 @@
+{% extends 'tasks/base.html' %}
+
+{% block body %}
+<div class="list-container">
+    <div class="box-container">
+        <h1 class="title">To-Do</h1>
+        
+        <form method="POST" action="/" class="addTask">
+            {% csrf_token %}
+            {{ form.title }}
+            <input type="submit" value="Añadir">
+        </form>
+
+        <div class="tasks">
+            {% for task in tasks %}
+                {% if task.completed == True %}
+                <div class="tasks-item">
+
+                    <span>&#9989;   {{ task }}</span>
+                                       
+                    <div class="edit-tasks">
+                        <a href="{% url 'tasks:update' task.id%}">✏️</a>
+                        <a href="{% url 'tasks:delete' task.id%}">&#10060;</a>
+                    </div>
+                </div>
+                {% else %}
+                <div class="tasks-item-uncomplete">
+                
+                    <span>&#9940;   {{ task }}</span>
+
+                    <div class="edit-tasks">
+                        <a href="{% url 'tasks:update' task.id%}">✏️</a>
+                        <a href="{% url 'tasks:delete' task.id%}">&#10060;</a>
+                    </div>
+                </div>
+                {% endif %}
+            {% endfor %}
+        </div>
+    </div>
+</div>
+{% endblock body %}

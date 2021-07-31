@@ -1,0 +1,195 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito&display=swap');
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Nunito', sans-serif;
+}
+
+
+body{
+    background: #8E2DE2;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #4A00E0, #8E2DE2);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #4A00E0, #8E2DE2); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+}
+
+.list-container{ 
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100vw;
+    height: 100vh;
+}
+
+.box-container{
+    background-color: #fff;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 35%;
+    height: 85%;
+    box-shadow: 4px 4px 4px 4px rgba(0, 0, 0, 0.3);
+    border-radius: 1em;
+}
+
+.title{
+    color: lightcoral;
+    padding: 1em;
+}
+
+.tasks{
+    margin-top: 4em;
+    overflow-y: auto;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+
+.tasks-item{
+    display: flex;
+    margin-bottom: 2em;
+    padding: 1em;
+    width: 90%;
+    border-radius: 1em;
+    box-shadow: 2px 2px 2px 2px rgba(0, 0, 0, 0.3);
+    background-color:  lightgreen;
+    justify-content: space-between;
+    
+}
+.tasks-item a{
+    text-decoration: none;
+}
+.tasks-item-uncomplete{
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 2em;
+    padding: 1em;
+    width: 90%;
+    border-radius: 1em;
+    box-shadow: 2px 2px 2px 2px rgba(0, 0, 0, 0.3);
+    background-color: lightskyblue;
+    text-decoration: none;
+}
+
+.tasks-item-uncomplete a{
+    text-decoration: none;
+}
+
+.addTask{
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+}
+.addTask input[type=submit] {
+    padding: .6em 1em; 
+    color: #fff;
+    background: #8E2DE2;
+    background: -webkit-linear-gradient(to right, #4A00E0, #8E2DE2);
+    background: linear-gradient(to right, #4A00E0, #8E2DE2);
+    border:0 none;
+    cursor:pointer;
+    -webkit-border-radius: .5em;
+    border-radius: .5em; 
+}
+.addTask input[type=submit]:hover{
+    background: #8E2DE2;
+    background: -webkit-linear-gradient(to right, #8E2DE2 #4A00E0);
+    background: linear-gradient(to right,#8E2DE2, #4A00E0); 
+}
+
+.addTask input[type=text]{
+    padding: .2em;
+    margin-left: .7em;
+    width: 70%;
+}
+
+.actualizar-tarea{
+    background-color: #fff;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 35%;
+    height: 85%;
+    box-shadow: 4px 4px 4px 4px rgba(0, 0, 0, 0.3);
+    border-radius: 1em;
+}
+
+.updateTask input{
+    display: block;
+    margin: 1em;
+}
+
+.updateTask input[type=submit] {
+    padding: .6em 1em; 
+    color: #fff;
+    background: #8E2DE2;
+    background: -webkit-linear-gradient(to right, #4A00E0, #8E2DE2);
+    background: linear-gradient(to right, #4A00E0, #8E2DE2);
+    border:0 none;
+    cursor:pointer;
+    -webkit-border-radius: .5em;
+    border-radius: .5em; 
+}
+
+.updateTask input[type=submit]:hover{
+    background: #8E2DE2;
+    background: -webkit-linear-gradient(to right, #8E2DE2 #4A00E0);
+    background: linear-gradient(to right,#8E2DE2, #4A00E0); 
+}
+
+.delete-container{
+    background-color: #fff;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 35%;
+    height: 85%;
+    box-shadow: 4px 4px 4px 4px rgba(0, 0, 0, 0.3);
+    border-radius: 1em;
+}
+
+.delete-title{
+    margin: 1em;
+}
+.delete-text{
+    margin: 1em;
+}
+
+.deleteTask input[type=submit] {
+    padding: .6em 1em; 
+    color: #fff;
+    background: #8E2DE2;
+    background: -webkit-linear-gradient(to right, #4A00E0, #8E2DE2);
+    background: linear-gradient(to right, #4A00E0, #8E2DE2);
+    border:0 none;
+    cursor:pointer;
+    -webkit-border-radius: .5em;
+    border-radius: .5em; 
+}
+
+.deleteTask input[type=submit]:hover{
+    background: #8E2DE2;
+    background: -webkit-linear-gradient(to right, #8E2DE2 #4A00E0);
+    background: linear-gradient(to right,#8E2DE2, #4A00E0); 
+}
+
+.delete-cancel{
+    margin: 1em
+}
+
+@media (max-width: 1000px) {
+    .box-container{
+        width: 90%;
+    }
+    .delete-container{
+        width: 90%;
+    }
+    .actualizar-tarea{
+        width: 90%;
+    }
+}

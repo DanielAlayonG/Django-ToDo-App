@@ -1,0 +1,17 @@
+{% extends 'tasks/base.html' %}
+
+{% block body %}
+
+<div class="list-container">
+    <div class="actualizar-tarea">
+        <h3 >Update Task</h3>
+        <form class="updateTask" method="POST" action="">
+            {% csrf_token %}
+            {{ form }}
+            <input type="submit" value="Actualizar">
+        </form>
+        <a class="delete-cancel"href="{% url 'tasks:index'%}">Cancelar</a>
+    </div>
+</div>
+
+{% endblock body %}

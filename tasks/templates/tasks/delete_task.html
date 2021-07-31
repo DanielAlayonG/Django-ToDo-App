@@ -1,0 +1,18 @@
+{% extends 'tasks/base.html' %}
+
+{% block body %}
+<div class="list-container">
+    <div class="delete-container">
+        <h1 class="delete-title">Delete task</h1>
+
+        <p class="delete-text">¿Seguro que quiere eliminar la tarea "{{task}}"?</p>
+
+
+        <form action="" method="POST" class="deleteTask">
+            {% csrf_token %}
+            <input type="submit" value="Eliminar Tarea">
+        </form>
+        <a class="delete-cancel"href="{% url 'tasks:index'%}">Cancelar</a>
+    </div>
+</div>
+{% endblock body %}
