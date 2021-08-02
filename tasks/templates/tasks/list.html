@@ -3,7 +3,12 @@
 {% block body %}
 <div class="list-container">
     <div class="box-container">
-        <h1 class="title">To-Do</h1>
+
+        <div class="title-container"> 
+            <h1 class="title">To-Do</h1>
+            <a href="">Logout</a>
+        </div>
+        
         
         <form method="POST" action="/" class="addTask">
             {% csrf_token %}
